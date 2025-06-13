@@ -6,6 +6,10 @@ app = FastAPI()
 @app.get("/")
 def home():
     return {"message": "Currency API is running ✅"}
+@app.get("/convert")
+def convert(from_currency: str, to_currency: str, amount: float):
+    # conversion logic
+    return {"result": ...}
 
 
 # Allow frontend access
