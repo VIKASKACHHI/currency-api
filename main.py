@@ -3,6 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+@app.get("/")
+def home():
+    return {"message": "Currency API is running ✅"}
+
+
 # Allow frontend access
 app.add_middleware(
     CORSMiddleware,
